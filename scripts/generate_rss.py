@@ -13,13 +13,36 @@ def rfc2822(dt: datetime) -> str:
     return format_datetime(dt)
 
 
-def build(days_ago: int, out_path: Path) -> None:
+def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
     now = datetime.now(UTC).replace(microsecond=0)
+
+    # ★ここを「元のやつ」に戻す：days_ago 日前の 23:27:44 固定
     pub = (now - timedelta(days=days_ago)).replace(
         hour=23, minute=27, second=44, microsecond=0
     )
 
     base = BASE_URL.rstrip("/")
+
+    items_xml = []
+    for i in range(1, item_count + 1):
+        title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+        link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+
+        # 1〜19: guidあり / 20〜30: guidなし
+        guid_xml = ""
+        if i <= 19:
+            guid = f"https://p-media.info/?p=test-{days_ago}-{i}"
+            guid_xml = f'\n      <guid isPermaLink="false">{guid}</guid>'
+
+        item = f"""    <item>
+      <title>{title}</title>
+      <link>{link}</link>
+      <pubDate>{rfc2822(pub)}</pubDate>
+      <dc:creator><![CDATA[testuser]]></dc:creator>
+      <category><![CDATA[遊技台・検定情報]]></category>{guid_xml}
+      <description><![CDATA[境界値テスト用（{days_ago}日前 / item{i}）]]></description>
+    </item>"""
+        items_xml.append(item)
 
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -42,15 +65,7 @@ def build(days_ago: int, out_path: Path) -> None:
     <sy:updateFrequency>1</sy:updateFrequency>
     <generator>https://wordpress.org/?v=5.1.10</generator>
 
-    <item>
-      <title>【テスト】pubDate {days_ago}日前の記事</title>
-      <link>https://p-media.info/post-test-{days_ago}/</link>
-      <pubDate>{rfc2822(pub)}</pubDate>
-      <dc:creator><![CDATA[testuser]]></dc:creator>
-      <category><![CDATA[遊技台・検定情報]]></category>
-      <guid isPermaLink="false">https://p-media.info/?p=test-{days_ago}</guid>
-      <description><![CDATA[境界値テスト用（{days_ago}日前）]]></description>
-    </item>
+{chr(10).join(items_xml)}
   </channel>
 </rss>
 """
@@ -62,7 +77,7 @@ def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
 
     for days in (89, 90, 91):
-        build(days, repo_root / f"feed-{days}days.xml")
+        build(days, repo_root / f"feed-{days}days.xml", item_count=30)
 
 
 if __name__ == "__main__":
