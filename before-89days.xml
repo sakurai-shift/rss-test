@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>遊技台・検定情報 &#8211; テスト（89日前） &#8211; P-MEDIA JAPAN</title>
+	<atom:link href="https://example.com/test/feed-89days.xml" rel="self" type="application/rss+xml" />
+	<link>https://p-media.info</link>
+	<description>パチンコ業界人のためのプロフェッショナルサイト（境界値テスト用）</description>
+	<lastBuildDate>
+	Fri, 26 Dec 2025 00:00:00 +0000	</lastBuildDate>
+	<language>ja</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.1.10</generator>
+
+	<item>
+		<title>【テスト】pubDate 89日前の記事</title>
+		<link>https://p-media.info/post-test-89/</link>
+		<pubDate>Sun, 28 Sep 2025 23:27:44 +0000</pubDate>
+		<dc:creator><![CDATA[testuser]]></dc:creator>
+		<category><![CDATA[遊技台・検定情報]]></category>
+		<guid isPermaLink="false">https://p-media.info/?p=test-89</guid>
+		<description><![CDATA[境界値テスト用（89日前）]]></description>
+	</item>
+</channel>
+</rss>
