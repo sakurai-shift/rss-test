@@ -1,0 +1,36 @@
+name: generate-rss
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 毎日 00:00 UTC（JSTだと09:00）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-rss
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate RSS
+        run: python scripts/generate_rss.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update test RSS (auto)" || exit 0
+          git push
