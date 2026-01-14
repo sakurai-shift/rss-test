@@ -25,8 +25,36 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
 
     items_xml = []
     for i in range(1, item_count + 1):
-        title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
-        link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+        # 89日前の場合、アイテム1、2、21、22は更新版を生成
+        is_updated = days_ago == 89 and i in (1, 2, 21, 22)
+
+        if is_updated:
+            # 更新版の設定
+            title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+            link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+
+            # 更新版のpubDate（固定値）
+            if i == 1:
+                updated_pub = datetime(2025, 10, 15, 23, 59, 59, tzinfo=timezone(timedelta(hours=9)))
+            elif i == 2:
+                updated_pub = datetime(2025, 10, 16, 0, 0, 0, tzinfo=timezone(timedelta(hours=9)))
+            elif i == 21:
+                updated_pub = datetime(2025, 10, 15, 14, 59, 59, tzinfo=UTC)
+            else:  # i == 22
+                updated_pub = datetime(2025, 10, 15, 15, 0, 0, tzinfo=UTC)
+
+            pub_date = rfc2822(updated_pub)
+            creator_cdata = "<![CDATA[ testuser ]]>"
+            category_cdata = "<![CDATA[ 遊技台・検定情報 ]]>"
+            desc_cdata = f"<![CDATA[ 境界値テスト用（{days_ago}日前 / item{i}） ]]>"
+        else:
+            # 通常版の設定
+            title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+            link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+            pub_date = rfc2822(pub)
+            creator_cdata = "<![CDATA[testuser]]>"
+            category_cdata = "<![CDATA[遊技台・検定情報]]>"
+            desc_cdata = f"<![CDATA[境界値テスト用（{days_ago}日前 / item{i}）]]>"
 
         # 1〜19: guidあり / 20〜30: guidなし
         guid_xml = ""
@@ -37,10 +65,10 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
         item = f"""    <item>
       <title>{title}</title>
       <link>{link}</link>
-      <pubDate>{rfc2822(pub)}</pubDate>
-      <dc:creator><![CDATA[testuser]]></dc:creator>
-      <category><![CDATA[遊技台・検定情報]]></category>{guid_xml}
-      <description><![CDATA[境界値テスト用（{days_ago}日前 / item{i}）]]></description>
+      <pubDate>{pub_date}</pubDate>
+      <dc:creator>{creator_cdata}</dc:creator>
+      <category>{category_cdata}</category>{guid_xml}
+      <description>{desc_cdata}</description>
     </item>"""
         items_xml.append(item)
 
