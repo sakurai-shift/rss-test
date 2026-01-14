@@ -22,7 +22,7 @@
 <item>
 <title>【テスト】pubDate 91日前の23時59分の記事-guidありそのまま</title>
 <link>https://p-media.info/post-test-91-2359/</link>
-<pubDate>Wed, 15 Oct 2025 23:59:59 +0000</pubDate>
+<pubDate>Wed, 15 Oct 2025 23:59:59 +09:00</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
@@ -38,7 +38,7 @@
 <item>
 <title>【テスト】pubDate 90日前の0時0分の記事-guidありそのまま</title>
 <link>https://p-media.info/post-test-90-0000/</link>
-<pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+<pubDate>Thu, 16 Oct 2025 00:00:00 +09:00</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
