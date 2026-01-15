@@ -24,11 +24,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate RSS
-        run: python scripts/generate_rss.py
+#      - name: Generate RSS
+#        run: python scripts/generate_rss.py
 
-      - name: Update feed-regist.xml
-        run: python scripts/update_feed_regist.py
+#      - name: Update feed-regist.xml
+#        run: python scripts/update_feed_regist.py
 
       - name: Commit changes
         run: |
