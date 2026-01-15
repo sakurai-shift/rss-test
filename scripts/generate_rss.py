@@ -25,35 +25,87 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
 
     items_xml = []
     for i in range(1, item_count + 1):
-        # 89日前の場合、アイテム1、2、21、22は更新版を生成
-        is_updated = days_ago == 89 and i in (1, 2, 21, 22)
+        # 89日前の場合の特別処理
+        is_special_89 = days_ago == 89 and i in (1, 2, 3, 4, 5, 6, 7, 21, 22, 23, 24, 25, 26, 27)
 
-        if is_updated:
-            # 更新版の設定
-            title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
-            link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
-
-            # 更新版のpubDate（固定値）
+        if is_special_89:
+            # 89日前の特別なアイテムの設定
             if i == 1:
-                # 89日前の23:59:59 JST
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
                 updated_pub = (now - timedelta(days=days_ago)).replace(
                     hour=23, minute=59, second=59, microsecond=0,
                     tzinfo=timezone(timedelta(hours=9))
                 )
             elif i == 2:
-                # 89日前の翌日0:00:00 JST
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+                updated_pub = (now - timedelta(days=days_ago-1)).replace(
+                    hour=0, minute=0, second=0, microsecond=0,
+                    tzinfo=timezone(timedelta(hours=9))
+                )
+            elif i == 3:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}titleのみ更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+                updated_pub = pub  # 通常のpubDate
+            elif i == 4:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+                updated_pub = pub.replace(second=0)  # 秒を0に
+            elif i == 5:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+                updated_pub = pub  # 通常のpubDate
+            elif i == 6:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=23, minute=59, second=59, microsecond=0,
+                    tzinfo=timezone(timedelta(hours=9))
+                )
+            elif i == 7:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
                 updated_pub = (now - timedelta(days=days_ago-1)).replace(
                     hour=0, minute=0, second=0, microsecond=0,
                     tzinfo=timezone(timedelta(hours=9))
                 )
             elif i == 21:
-                # 89日前の14:59:59 UTC
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
                 updated_pub = (now - timedelta(days=days_ago)).replace(
                     hour=14, minute=59, second=59, microsecond=0,
                     tzinfo=UTC
                 )
-            else:  # i == 22
-                # 89日前の15:00:00 UTC
+            elif i == 22:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=15, minute=0, second=0, microsecond=0,
+                    tzinfo=UTC
+                )
+            elif i == 23:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}titleのみ更新"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+                updated_pub = pub  # 通常のpubDate
+            elif i == 24:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+                updated_pub = pub.replace(second=0)  # 秒を0に
+            elif i == 25:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+                updated_pub = pub  # 通常のpubDate
+            elif i == 26:
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=14, minute=59, second=59, microsecond=0,
+                    tzinfo=UTC
+                )
+            else:  # i == 27
+                title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
+                link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
                 updated_pub = (now - timedelta(days=days_ago)).replace(
                     hour=15, minute=0, second=0, microsecond=0,
                     tzinfo=UTC
