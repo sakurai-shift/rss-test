@@ -33,17 +33,13 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
             if i == 1:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=23, minute=59, second=59, microsecond=0,
-                    tzinfo=timezone(timedelta(hours=9))
-                )
+                # 固定日付: 2025年10月16日 23:59:59 JST
+                updated_pub = datetime(2025, 10, 16, 23, 59, 59, tzinfo=timezone(timedelta(hours=9)))
             elif i == 2:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
-                updated_pub = (now - timedelta(days=days_ago-1)).replace(
-                    hour=0, minute=0, second=0, microsecond=0,
-                    tzinfo=timezone(timedelta(hours=9))
-                )
+                # 固定日付: 2025年10月17日 00:00:00 JST
+                updated_pub = datetime(2025, 10, 17, 0, 0, 0, tzinfo=timezone(timedelta(hours=9)))
             elif i == 3:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}titleのみ更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}/"
@@ -59,31 +55,23 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
             elif i == 6:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=23, minute=59, second=59, microsecond=0,
-                    tzinfo=timezone(timedelta(hours=9))
-                )
+                # 固定日付: 2025年10月16日 23:59:59 JST
+                updated_pub = datetime(2025, 10, 16, 23, 59, 59, tzinfo=timezone(timedelta(hours=9)))
             elif i == 7:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
-                updated_pub = (now - timedelta(days=days_ago-1)).replace(
-                    hour=0, minute=0, second=0, microsecond=0,
-                    tzinfo=timezone(timedelta(hours=9))
-                )
+                # 固定日付: 2025年10月17日 00:00:00 JST
+                updated_pub = datetime(2025, 10, 17, 0, 0, 0, tzinfo=timezone(timedelta(hours=9)))
             elif i == 21:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=14, minute=59, second=59, microsecond=0,
-                    tzinfo=UTC
-                )
+                # 固定日付: 2025年10月16日 14:59:59 UTC
+                updated_pub = datetime(2025, 10, 16, 14, 59, 59, tzinfo=UTC)
             elif i == 22:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=15, minute=0, second=0, microsecond=0,
-                    tzinfo=UTC
-                )
+                # 固定日付: 2025年10月16日 15:00:00 UTC
+                updated_pub = datetime(2025, 10, 16, 15, 0, 0, tzinfo=UTC)
             elif i == 23:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}titleのみ更新"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}/"
@@ -99,17 +87,13 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
             elif i == 26:
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=14, minute=59, second=59, microsecond=0,
-                    tzinfo=UTC
-                )
+                # 固定日付: 2025年10月16日 14:59:59 UTC
+                updated_pub = datetime(2025, 10, 16, 14, 59, 59, tzinfo=UTC)
             else:  # i == 27
                 title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新対象確認"
                 link = f"https://p-media.info/post-test-{days_ago}-{i}kousintaisyou/"
-                updated_pub = (now - timedelta(days=days_ago)).replace(
-                    hour=15, minute=0, second=0, microsecond=0,
-                    tzinfo=UTC
-                )
+                # 固定日付: 2025年10月16日 15:00:00 UTC
+                updated_pub = datetime(2025, 10, 16, 15, 0, 0, tzinfo=UTC)
 
             pub_date = rfc2822(updated_pub)
             creator_cdata = "<![CDATA[ testuser ]]>"
