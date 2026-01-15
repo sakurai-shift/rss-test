@@ -25,13 +25,52 @@ def build(days_ago: int, out_path: Path, item_count: int = 30) -> None:
 
     items_xml = []
     for i in range(1, item_count + 1):
-        # 通常版の設定
-        title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
-        link = f"https://p-media.info/post-test-{days_ago}-{i}/"
-        pub_date = rfc2822(pub)
-        creator_cdata = "<![CDATA[ testuser ]]>"
-        category_cdata = "<![CDATA[ 遊技台・検定情報 ]]>"
-        desc_cdata = f"<![CDATA[ 境界値テスト用（{days_ago}日前 / item{i}） ]]>"
+        # 89日前の場合、アイテム1、2、21、22は更新版を生成
+        is_updated = days_ago == 89 and i in (1, 2, 21, 22)
+
+        if is_updated:
+            # 更新版の設定
+            title = f"【テスト】pubDate {days_ago}日前の記事-{i}更新"
+            link = f"https://p-media.info/post-test-{days_ago}-{i}kousin/"
+
+            # 更新版のpubDate（固定値）
+            if i == 1:
+                # 89日前の23:59:59 JST
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=23, minute=59, second=59, microsecond=0,
+                    tzinfo=timezone(timedelta(hours=9))
+                )
+            elif i == 2:
+                # 89日前の翌日0:00:00 JST
+                updated_pub = (now - timedelta(days=days_ago-1)).replace(
+                    hour=0, minute=0, second=0, microsecond=0,
+                    tzinfo=timezone(timedelta(hours=9))
+                )
+            elif i == 21:
+                # 89日前の14:59:59 UTC
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=14, minute=59, second=59, microsecond=0,
+                    tzinfo=UTC
+                )
+            else:  # i == 22
+                # 89日前の15:00:00 UTC
+                updated_pub = (now - timedelta(days=days_ago)).replace(
+                    hour=15, minute=0, second=0, microsecond=0,
+                    tzinfo=UTC
+                )
+
+            pub_date = rfc2822(updated_pub)
+            creator_cdata = "<![CDATA[ testuser ]]>"
+            category_cdata = "<![CDATA[ 遊技台・検定情報 ]]>"
+            desc_cdata = f"<![CDATA[ 境界値テスト用（{days_ago}日前 / item{i}） ]]>"
+        else:
+            # 通常版の設定
+            title = f"【テスト】pubDate {days_ago}日前の記事-{i}"
+            link = f"https://p-media.info/post-test-{days_ago}-{i}/"
+            pub_date = rfc2822(pub)
+            creator_cdata = "<![CDATA[ testuser ]]>"
+            category_cdata = "<![CDATA[ 遊技台・検定情報 ]]>"
+            desc_cdata = f"<![CDATA[ 境界値テスト用（{days_ago}日前 / item{i}） ]]>"
 
         # 1〜19: guidあり / 20〜30: guidなし
         guid_xml = ""
