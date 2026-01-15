@@ -112,8 +112,12 @@ def update_feed_regist(xml_path: Path) -> None:
                 new_dt = (now - timedelta(days=days_ago)).replace(
                     hour=hour, minute=minute, second=second, microsecond=0
                 )
-                # 既存のタイムゾーンを維持
-                new_dt = new_dt.replace(tzinfo=old_tz)
+                # 特定の記事はJST（+09:00）に固定
+                if "91日前の23時59分の記事-guidありそのまま" in title or "90日前の0時0分の記事-guidありそのまま" in title:
+                    new_dt = new_dt.replace(tzinfo=JST)
+                else:
+                    # 既存のタイムゾーンを維持
+                    new_dt = new_dt.replace(tzinfo=old_tz)
             else:
                 # 時刻が指定されていない場合は、既存の時刻を維持
                 new_dt = (now - timedelta(days=days_ago)).replace(
