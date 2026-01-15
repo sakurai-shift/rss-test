@@ -13,7 +13,7 @@
     <atom:link href="https://sakurai-shift.github.io/rss-test/feed-89days.xml" rel="self" type="application/rss+xml" />
     <link>https://p-media.info</link>
     <description>パチンコ業界人のためのプロフェッショナルサイト（境界値テスト用）</description>
-    <lastBuildDate>Thu, 15 Jan 2026 06:55:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 07:27:35 +0000</lastBuildDate>
     <language>ja</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
@@ -22,7 +22,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-1更新</title>
       <link>https://p-media.info/post-test-89-1kousin/</link>
-      <pubDate>Sat, 18 Oct 2025 23:59:59 +0900</pubDate>
+      <pubDate>Thu, 16 Oct 2025 23:59:59 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-89-1</guid>
@@ -31,7 +31,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-2更新</title>
       <link>https://p-media.info/post-test-89-2kousin/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-89-2</guid>
@@ -67,7 +67,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-6更新対象確認</title>
       <link>https://p-media.info/post-test-89-6kousintaisyou/</link>
-      <pubDate>Sat, 18 Oct 2025 23:59:59 +0900</pubDate>
+      <pubDate>Thu, 16 Oct 2025 23:59:59 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-89-6</guid>
@@ -76,7 +76,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-7更新対象確認</title>
       <link>https://p-media.info/post-test-89-7kousintaisyou/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-89-7</guid>
@@ -201,7 +201,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-21更新</title>
       <link>https://p-media.info/post-test-89-21kousin/</link>
-      <pubDate>Sat, 18 Oct 2025 14:59:59 +0000</pubDate>
+      <pubDate>Thu, 16 Oct 2025 14:59:59 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（89日前 / item21） ]]></description>
@@ -209,7 +209,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-22更新</title>
       <link>https://p-media.info/post-test-89-22kousin/</link>
-      <pubDate>Sat, 18 Oct 2025 15:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Oct 2025 15:00:00 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（89日前 / item22） ]]></description>
@@ -241,7 +241,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-26更新対象確認</title>
       <link>https://p-media.info/post-test-89-26kousintaisyou/</link>
-      <pubDate>Sat, 18 Oct 2025 14:59:59 +0000</pubDate>
+      <pubDate>Thu, 16 Oct 2025 14:59:59 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（89日前 / item26） ]]></description>
@@ -249,7 +249,7 @@
     <item>
       <title>【テスト】pubDate 89日前の記事-27更新対象確認</title>
       <link>https://p-media.info/post-test-89-27kousintaisyou/</link>
-      <pubDate>Sat, 18 Oct 2025 15:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Oct 2025 15:00:00 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（89日前 / item27） ]]></description>
