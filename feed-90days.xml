@@ -20,9 +20,9 @@
     <generator>https://wordpress.org/?v=5.1.10</generator>
 
     <item>
-      <title>【テスト】pubDate 90日前の記事-1</title>
-      <link>https://p-media.info/post-test-90-1/</link>
-      <pubDate>Fri, 17 Oct 2025 23:27:44 +0000</pubDate>
+      <title>【テスト】pubDate 90日前の記事-1更新</title>
+      <link>https://p-media.info/post-test-90-1kousin/</link>
+      <pubDate>Fri, 17 Oct 2025 23:27:00 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-90-1</guid>
@@ -273,7 +273,7 @@
     <item>
       <title>【テスト】pubDate 90日前の記事-30</title>
       <link>https://p-media.info/post-test-90-30/</link>
-      <pubDate>Sat, 18 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 23:27:00 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（90日前 / item30） ]]></description>
