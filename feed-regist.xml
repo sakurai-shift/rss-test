@@ -84,7 +84,7 @@
 <item>
 <title>【テスト】pubDate 90日前の記事-1re</title>
 <link>https://p-media.info/post-test-90-1/</link>
-<pubDate>Sun, 26 Oct 2025 23:59:59 +0900</pubDate>
+<pubDate>Tue, 28 Oct 2025 23:59:59 +0900</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
@@ -100,7 +100,7 @@
 <item>
 <title>【テスト】pubDate 90日前の記事-2re</title>
 <link>https://p-media.info/post-test-90-2/</link>
-<pubDate>Mon, 27 Oct 2025 00:00:00 +0900</pubDate>
+<pubDate>Wed, 29 Oct 2025 00:00:00 +0900</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
@@ -116,7 +116,7 @@
 <item>
 <title>【テスト】pubDate 90日前の記事-21re</title>
 <link>https://p-media.info/post-test-90-21/</link>
-<pubDate>Sun, 26 Oct 2025 14:59:59 +0000</pubDate>
+<pubDate>Tue, 28 Oct 2025 14:59:59 +0000</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
@@ -131,7 +131,7 @@
 <item>
 <title>【テスト】pubDate 90日前の記事-22re</title>
 <link>https://p-media.info/post-test-90-22/</link>
-<pubDate>Sun, 26 Oct 2025 15:00:00 +0000</pubDate>
+<pubDate>Tue, 28 Oct 2025 15:00:00 +0000</pubDate>
 <dc:creator>
 <![CDATA[ testuser ]]>
 </dc:creator>
