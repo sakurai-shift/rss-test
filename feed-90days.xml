@@ -38,36 +38,36 @@
       <description><![CDATA[ 境界値テスト用（90日前 / item2） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-3</title>
+      <title>【テスト】pubDate 90日前の記事-3re</title>
       <link>https://p-media.info/post-test-90-3/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Mon, 27 Oct 2025 23:59:59 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-90-3</guid>
       <description><![CDATA[ 境界値テスト用（90日前 / item3） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-4</title>
+      <title>【テスト】pubDate 90日前の記事-4re</title>
       <link>https://p-media.info/post-test-90-4/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0900</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-90-4</guid>
       <description><![CDATA[ 境界値テスト用（90日前 / item4） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-5</title>
+      <title>【テスト】pubDate 90日前の記事-5re</title>
       <link>https://p-media.info/post-test-90-5/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Mon, 27 Oct 2025 14:59:59 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-90-5</guid>
       <description><![CDATA[ 境界値テスト用（90日前 / item5） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-6</title>
+      <title>【テスト】pubDate 90日前の記事-6re</title>
       <link>https://p-media.info/post-test-90-6/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Mon, 27 Oct 2025 15:00:00 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <guid isPermaLink="false">https://p-media.info/?p=test-90-6</guid>
