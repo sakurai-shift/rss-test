@@ -193,7 +193,7 @@
     <item>
       <title>【テスト】pubDate 90日前の記事-20</title>
       <link>https://p-media.info/post-test-90-20/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <pubDate>Mon, 27 Oct 2025 23:27:22 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（90日前 / item20） ]]></description>
@@ -208,7 +208,7 @@
     </item>
     <item>
       <title>【テスト】pubDate 90日前の記事-22</title>
-      <link>https://p-media.info/post-test-90-22/</link>
+      <link>https://p-media.info/post-test-90-22/re</link>
       <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
@@ -223,7 +223,7 @@
       <description><![CDATA[ 境界値テスト用（90日前 / item23） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-24</title>
+      <title>【テスト】pubDate 90日前の記事-24re</title>
       <link>https://p-media.info/post-test-90-24/</link>
       <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
@@ -239,9 +239,9 @@
       <description><![CDATA[ 境界値テスト用（90日前 / item25） ]]></description>
     </item>
     <item>
-      <title>【テスト】pubDate 90日前の記事-26</title>
-      <link>https://p-media.info/post-test-90-26/</link>
-      <pubDate>Mon, 27 Oct 2025 23:27:44 +0000</pubDate>
+      <title>【テスト】pubDate 90日前の記事-26re</title>
+      <link>https://p-media.info/post-test-90-26/re</link>
+      <pubDate>Mon, 27 Oct 2025 23:27:22 +0000</pubDate>
       <dc:creator><![CDATA[ testuser ]]></dc:creator>
       <category><![CDATA[ 遊技台・検定情報 ]]></category>
       <description><![CDATA[ 境界値テスト用（90日前 / item26） ]]></description>
